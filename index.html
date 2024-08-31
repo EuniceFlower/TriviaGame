@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>¡Desafío!</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title" id="title">¡Desafío!</h1>
+    </header>
+    <main class="main">
+        <div class="card">
+            <div class="header-card">
+                <div>
+                    <p><span class="card-title">Welcome</span> to Desafio, where you can review
+                         what you have learned as many times as you want!</p>
+                </div>
+                <div>
+                    <label for="">Enter your name to start playing</label>
+                    <input type="text" autofocus class="input-name" id="name">
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <img src="img/question.svg" alt="" width="100%" height="150">
+            </div>
+            <div>
+                <button class="iniciar"><a onclick="inicio()" class="inicio">Start</a></button>
+            </div>
+        </div>
+    </main>
+    <script>
+
+        function inicio() {
+            const nombre = document.querySelector("#name").value;
+            if (nombre.length > 0) {
+                const value = {
+                    "nombre": nombre
+                };
+                localStorage.setItem("value", JSON.stringify(value));
+                window.location.href="name.html";
+            }else{
+                alert("Please enter your name or nickname!!");
+            }
+        }
+    
+    </script>
+</body>
+</html>

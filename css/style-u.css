@@ -1,0 +1,28 @@
+.header-card-u{
+    display: flex;
+    justify-content: space-between;
+}
+.guiaRsp{
+    font-weight: bold;
+}
+.botones-trivia .boton-u{
+    background-color: #7209B7;
+}
+.card-preg{
+    text-align: center;
+}
+.form{
+    width: 100%;
+    font-family: 'Comic Neue', cursive;
+    border-color: rgb(228, 228, 228);
+    padding: 10px;
+}
+.form::-webkit-scrollbar {
+    display: none;
+}
+.op{
+    padding: 15px;
+    color:  #3A0CA3;
+    font-weight: bold;
+    cursor: pointer;
+}

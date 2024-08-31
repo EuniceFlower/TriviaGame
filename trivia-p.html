@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-u.css">
+    <link rel="stylesheet" href="css/style-name.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>History of Peru</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title" id="title">Hola Eunice</h1>
+    </header>
+    <main class="main">
+        <div class="card">
+            <div class="header-card-u">
+                <div class="salir">
+                    <a class="atras" href="index.html" id="salir">Get out</a>
+                </div>
+                <div class="guiaRsp">
+                    <span><span class="respondidas" id="rsp-guia">1</span> of <span class="total" id="total">10</span></span>
+                </div>
+            </div>
+            <div class="card-preg">
+                <h3 class="pgs" id="pgs"></h3>
+            </div>
+            <div>
+                <!-- <form name="form" id="form"></form> -->
+                <select class="form" name="form" id="form" onchange="activar()" size="5"></select>
+            </div>
+            <div class="botones-trivia" id="enviar">
+                <!-- <button id="btn-cnt" disabled class="iniciar boton-u"><a onclick="trivia()" class="inicio">Continuar...</a></button> -->
+                <!-- <button class="iniciar boton-u" onclick="trivia()" id="btn-cnt">Continuar...</button> -->
+               
+            </div>
+            <div class="card-preg" id="rst"></div>
+        </div>
+    </main>
+</body>
+<script src="js/trivia-p.js"></script>
+</html>

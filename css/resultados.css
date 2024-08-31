@@ -1,0 +1,46 @@
+.header-rs{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .header-rs{
+    margin-bottom: 20px;
+}
+.header-rs >div{
+    margin-bottom: 10px;
+}
+.head-rs{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.msg{
+    font-weight: bold;
+    color: #7209B7;
+}
+.btn-rs{
+    display: flex;
+    grid-gap: 40px;
+    
+}
+.btn-rs .btn-salir{
+    background-color: #BA181B;
+}
+.verde{
+    color:#18ba20;
+    font-weight: bold;
+}
+.error{
+    color:#BA181B;
+    font-weight: bold;
+    text-decoration:line-through;
+}
+.card-preg{
+    font-size: 14px;
+    text-align: start;
+}
+.options{
+    margin-left: 20px;
+}
+.rspPreg{
+    margin-bottom: 10px;
+}

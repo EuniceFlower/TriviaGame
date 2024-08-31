@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.inicio{
+    color: #FAF9F9;
+    text-decoration: none;
+    font-family: 'Comic Neue', cursive;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 40vh;
+    padding: 80px 25px 0px 25px;
+    background-color: #3A0CA3;
+    display: flex;
+    align-items: flex-start;
+}
+.header .title{
+    font-family: 'Permanent Marker', cursive;
+    color: #FAF9F9;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+}
+.main{
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.card{
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 40px 30px 10px 30px;
+    margin-top: -85px;
+    box-shadow: -8px 8px 30px rgba(0, 0, 0, 0.5);
+    background-color: #FFFFFF;
+    font-family: 'Comic Neue', cursive;
+    color: #565c69;
+}
+.card > div{
+    margin-bottom: 40px;
+}
+.card .header-card{
+    text-align: center;
+    font-size: 18px;
+}
+.header-card >div{
+    margin-bottom: 30px;
+}
+.card .card-title{
+    color: black;
+    font-weight: bold;
+    font-size: 23px;
+    outline: none;
+}
+.input-name{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 2px 40px 2px 40px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #a0a0a0;
+    color: #3A0CA3;
+    font-weight: bold;
+}
+.input-name:focus{
+    border: 1px solid #3A0CA3;
+}
+.iniciar{
+    width: 100%;
+    height: 32px;
+    background-color: #7209B7;
+    color: #FAF9F9;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Comic Neue', cursive;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+@media(min-width:768px){
+    .header{
+        padding: 80px 50px 0px 50px;
+    }
+    .card{
+        width: 450px;
+    }
+}

@@ -1,0 +1,24 @@
+.header-card >div{
+    margin-bottom: 10px;
+}
+.header-atras{
+    text-align: left;
+}
+.atras{
+    color: #b6b6b6;
+    text-decoration: underline;
+}
+.btn-t >button{
+    margin-bottom: 20px;
+}
+.boton-u{
+    background-color: #B5179E;
+    height: 32px;
+}
+.boton-p{
+    background-color: #4361EE;
+    height: 32px;
+}
+.card .text-inst{
+    font-size: 18px;
+}

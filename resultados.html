@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-u.css">
+    <link rel="stylesheet" href="css/style-name.css">
+    <link rel="stylesheet" href="css/resultados.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Results</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title" id="title">Results!</h1>
+    </header>
+    <main class="main">
+        <div class="card">
+            <div class="header-rs">
+                <div class="salir head-rs">
+                    <span><span id="rs-final"></span> of <span id="pg-total"></span> correct questions</span>
+                </div>
+                <div class="guiaRsp msg">
+                    <span id="msmCard">¡Message!</span>
+                </div>
+            </div>
+            <div class="card-preg" id="cardPreg"> 
+
+            </div>
+            <!-- <div id="cardAlternativa"> </div> -->
+            <div class="botones-trivia btn-rs">
+                <button id="1" class="iniciar boton-u btn-home"><a class="inicio" href="index.html">Play again</a></button>
+                <button class="iniciar boton-u btn-salir"><a class="inicio" href="index.html">Get out</a></button>
+            </div>
+        </div>
+    </main>
+    </body>
+        <script>
+            const rsFinal=document.getElementById('rs-final'); //span de las corrrectas
+            const pgTotal=document.getElementById('pg-total'); //span del total de preguntas
+            const msmCard=document.getElementById('msmCard');   //span donde irá el mensaje
+            const cardPreg=document.getElementById('cardPreg'); //h5 preguntas
+            let i=0,j=0;
+
+            var rsp=JSON.parse(localStorage.getItem("valorR")); //json de resultados
+
+            rsFinal.innerHTML=rsp.resultado;
+            pgTotal.innerHTML=rsp.preguntas.length;
+            mensaje();
+            mostrarPreguntas();
+            function mensaje(){
+                var msm="";
+                if(rsp.resultado<=3){
+                    msm="¡Wrong! low score";
+                }else{
+                    if(rsp.resultado<=5){
+                        msm="¡Keep studying!";
+                    }else{
+                        if(rsp.resultado<=7){
+                            msm="¡Nothing wrong! Keep studying";
+                        }else{
+                            if(rsp.resultado<10){
+                                msm="¡Nothing wrong! Close to perfection";
+                            }else{
+                                msm="¡Congratulations! Perfect score"
+                            }
+                        }
+                    }
+                }
+                msmCard.innerHTML=msm;
+            }
+        
+            function mostrarPreguntas(){
+                let cadena="";
+                
+                for(i=0;i<rsp.preguntas.length;i++){
+                    cadena+=`<div class="rspPreg">`;
+                    cadena+=`<h4 style="font-weight: bold;">${i+1}. ${rsp.preguntas[i]}</h4>`;
+                    cadena+=`<div class="options">`;
+                    for(j=0;j<rsp.alternativas[i].length;j++){
+                        cadena+=`<span class="${i}">${rsp.alternativas[i][j]}</span><br/>`;
+                    }
+                    cadena+=`</div>`;
+                    cadena+=`</div>`;
+                }
+                cardPreg.innerHTML=cadena;
+                porConsola();
+            }
+            function porConsola(){
+                let elm="0";
+                let r="0",ru="0";
+                for(let i=0;i<rsp.preguntas.length;i++){
+                    elm=document.getElementsByClassName(`${i}`);
+                    r=rsp.respuestas[i];
+                    elm[r].classList.add('verde');
+                    if(rsp.respuestas[i]!=rsp.respuestaUser[i]){
+                        ru=rsp.respuestaUser[i];
+                        elm[ru].classList.add('error');
+                    }
+                }
+            }
+        
+        </script>
+</html>         
